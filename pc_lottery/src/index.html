@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>年会抽奖</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<link rel="stylesheet" href="./c/reset.css">
+		<link rel="stylesheet" href="./c/index.scss">
+		<link rel="stylesheet" href="./c/animate.min.css">
+	</head>
+	<body> 
+	  <div class="lottery-wrap">
+			<div class="prize-item left">
+				<!-- <h3>本轮奖品</h3> -->
+				<div class="prize-pic ">
+					<div class="js-prize-name"></div>
+					<img class="js-prize-pic" src="./i/prize.png" alt="年会奖品">
+				</div>
+			</div>
+			<div class="container-wrap">
+				<div class="pull-right prize-num js-prize-num-wrap animated"><span class="js-prize-num">0</span></div>
+				<div class="animated" id="container"></div>
+				<div class="pop-winner animated" id="winner" style="display: none">
+					<div class="pop-winner-inner clearfix">
+						<div class="pop-winner__title"></div>
+						<ul class="js-winner-list clearfix">
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div id="menu">
+				<button id="start">开始</button>
+				<button id="stop">停止</button>			
+			</div>
+			<div class="prize-item right">
+				<div class="prize-pic">
+					<div class="js-prize-name"></div>
+					<img class="js-prize-pic" src="./i/prize.png" alt="年会奖品">
+				</div>
+			</div>
+			<!-- <div class="color-bar animated" style="display: none"></div> -->
+		</div>
+
+		<script src="./j/lib/jquery-3.1.1.min.js"></script>
+		<script>
+			var host = '192.168.135.89:9920'
+			var httpUrl = 'http://' + host
+			window.oPageConfig = {
+				oUrl: {
+					// httpUrl:'http://192.168.137.87:9920',
+					wsUrl: 'ws://'+ host +'/ws',
+					personImg: httpUrl + '/user/pool'
+				}
+			};
+		</script>		
+		<script src="./j/lib/three.min.js"></script>
+		<script src="./j/lib/Tween.js"></script>
+		<script src="./j/lib/TrackballControls.js"></script>
+		<script src="./j/lib/CSS3DRenderer.js"></script>
+		<script src="./j/lib/imgPreload.js"> </script>
+		<script src="./j/index.js"> </script>
+	</body>
+</html>

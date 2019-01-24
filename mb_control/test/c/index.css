@@ -1,0 +1,541 @@
+@charset "UTF-8";
+
+/* ==========================================================
+ * v20170713
+ * ==========================================================
+ * Copyright shihua
+ *
+ * 游戏中心样式
+ * ========================================================== */
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #f0f0f0;
+}
+
+body {
+  position: relative;
+  background: url("../i/bg.png") no-repeat;
+  background-size: 100% 100%;
+}
+
+.hide {
+  display: none !important;
+}
+
+.control-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0 0.8rem;
+  font-size: 0;
+  text-align: center;
+}
+
+.control-wrap .btn-history {
+  position: absolute;
+  top: 0.2rem;
+  right: 0.2rem;
+  text-align: right;
+  font-size: 0.24rem;
+  background: #00000033;
+  padding: 0.1rem 0.2rem;
+  border-radius: 0.08rem;
+  color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0.04rem 0.04rem #82659f;
+}
+
+.prize-type {
+  position: relative;
+  display: inline-block;
+  margin-top: 0.2rem;
+  text-align: center;
+}
+
+.prize-type:before {
+  content: '';
+  position: absolute;
+  right: 0.12rem;
+  top: 0.25rem;
+  width: 0;
+  height: 0;
+  border: 0.12rem solid #f5f5f5;
+  border-color: #d1cdc5 transparent transparent transparent;
+}
+
+.prize-body {
+  width: 100%;
+  margin-top: 0.5rem;
+  position: absolute;
+  width: 9rem;
+  height: 4rem;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.prize-info {
+  float: left;
+  margin-top: 0.2rem;
+  width: 36%;
+  text-align: center;
+  font-size: 0;
+}
+
+.prize-info__title {
+  display: inline-block;
+  width: 1.925rem;
+  height: 0.455rem;
+  background: url("../i/title.png") no-repeat;
+  background-size: 100% 100%;
+}
+
+.prize-info__prize {
+  padding-top: 0.15rem;
+  font-size: 0.28rem;
+  font-weight: bold;
+  color: #b7b1a4;
+}
+
+.prize-info__img {
+  position: absolute;
+  display: inline-block;
+  margin-top: 0.2rem;
+  width: 3.1rem;
+  height: 2.6rem;
+  bottom: 0;
+  left: 0;
+}
+
+.prize-info__img img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.prize-num {
+  float: right;
+  width: 60%;
+}
+
+.prize-num .input-num {
+  position: relative;
+  float: right;
+  width: 4.932rem;
+  height: 1.492rem;
+  background: url("../i/input-num.png") no-repeat;
+  background-size: 100% 100%;
+}
+
+.prize-num .input-num input {
+  position: absolute;
+  left: 0;
+  bottom: 0.1rem;
+  width: 100%;
+  height: 0.55rem;
+  border: none;
+  background: transparent;
+  text-align: center;
+  line-height: 0.55rem;
+  font-size: 0.32rem;
+  color: #666;
+}
+
+.prize-num .input-num input::-webkit-input-placeholder {
+  /* placeholder颜色  */
+  color: #bababa;
+  /* placeholder字体大小  */
+  font-size: 0.22rem;
+  line-height: 0.5rem;
+  /* placeholder位置  */
+}
+
+.prize-num .text-info {
+  font-size: 0.22rem;
+  color: #9a001b;
+}
+
+.prize-num .text-info .error-info {
+  float: left;
+  margin-left: 0.6rem;
+}
+
+.prize-num .text-info .remain-prize {
+  float: right;
+}
+
+.prize-num .btn-start,
+.prize-num .btn-stop,
+.prize-num .btn-ing,
+.prize-num .btn-show-prize {
+  float: right;
+  margin-top: 0.1rem;
+  width: 4.932rem;
+  height: 1.0305rem;
+  background: url("../i/btn-start.png") no-repeat;
+  background-size: 100% 100%;
+}
+
+.prize-num .btn-stop {
+  background: url("../i/btn-stop.png") no-repeat;
+  background-size: 100% 100%;
+}
+
+.prize-num .btn-ing {
+  background: url("../i/btn-ing.png") no-repeat;
+  background-size: 100% 100%;
+}
+
+.prize-num .btn-show-prize {
+  background: url("../i/btn-show-prize.png") no-repeat;
+  background-size: 100% 100%;
+}
+
+.prize-num .count-down {
+  position: absolute;
+  bottom: -0.3rem;
+  right: 0;
+  font-size: 0.22rem;
+  text-align: right;
+  color: #9a001b;
+  margin-top: -0.1rem;
+}
+
+.prize-select-list {
+  font-size: 0.38rem;
+  color: #b7b1a4;
+  padding: 0.06rem 0.5rem 0.06rem 0.2rem;
+  border-radius: 0.04rem;
+}
+
+.prize-select-list option {
+  display: inline-block;
+  font-size: 0.18rem;
+}
+
+.pop-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  -webkit-transform: all 0.3s;
+      -ms-transform: all 0.3s;
+          transform: all 0.3s;
+  z-index: 99;
+}
+
+.pop-config {
+  position: absolute;
+  padding-top: 0.75rem;
+  width: 5rem;
+  height: 3rem;
+  left: 50%;
+  top: 50%;
+  border-radius: 0.08rem;
+  background: #fcfaef;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 0.24rem;
+  z-index: 100;
+}
+
+.pop-config p {
+  padding: 0 0.2rem;
+  text-align: left;
+}
+
+.pop-config p:first-child {
+  margin-bottom: 0.1rem;
+}
+
+.pop-config p label {
+  display: inline-block;
+  width: 1.2rem;
+  color: #6c6b6b;
+  font-size: 0.22rem;
+  text-align: right;
+}
+
+.pop-config .btn-line {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  border-top: 0.01rem solid #999;
+}
+
+.pop-config .btn-line .btn-cancel,
+.pop-config .btn-line .btn-ok {
+  height: 0.6rem;
+  line-height: 0.6rem;
+  width: 50%;
+  text-align: center;
+}
+
+.pop-config .btn-line .btn-cancel {
+  float: left;
+  color: #999;
+  border-right: 0.01rem solid #999;
+}
+
+.pop-config .btn-line .btn-ok {
+  float: right;
+  color: #9a001b;
+}
+
+.pop-history-info {
+  position: absolute;
+  padding: 0.1rem;
+  width: 6rem;
+  height: 5rem;
+  left: 50%;
+  top: 50%;
+  border-radius: 0.08rem;
+  background: #fcfaef;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 0.22rem;
+  z-index: 100;
+}
+
+.pop-history-info .btn-close {
+  position: absolute;
+  width: 0.4rem;
+  height: 0.4rem;
+  right: -0.14rem;
+  top: -0.14rem;
+  background: url("../i/icon-close.png") no-repeat 0.06rem 0.04rem #d5834d;
+  background-size: 67% 67%;
+  border-radius: 50%;
+  font-size: 0.24rem;
+  color: #fff;
+}
+
+.pop-history-info .history-title {
+  margin-bottom: 0.1rem;
+  color: #d5834d;
+  font-weight: bold;
+}
+
+.pop-history-info ul {
+  font-size: 0.2rem;
+}
+
+.pop-history-info ul .history-list-inner {
+  height: 4rem;
+  overflow-y: auto;
+}
+
+.pop-history-info ul li {
+  padding: 0.04rem 0;
+}
+
+.pop-history-info ul li.list-title {
+  color: #b7b1a4;
+  border-bottom: 0.01rem solid #d1cdc5;
+  margin-bottom: 0.1rem;
+  padding-bottom: 0.08rem;
+}
+
+.pop-history-info ul li span {
+  display: inline-block;
+  width: 60%;
+}
+
+.pop-history-info ul li span:first-child {
+  width: 20%;
+  color: #b7b1a4;
+}
+
+.pop-history-info ul li span:last-child {
+  width: 20%;
+  color: #b7b1a4;
+}
+
+.pop-alert {
+  width: 100%;
+  padding: 0.08rem 0.16rem;
+  margin: 0;
+  box-sizing: border-box;
+  border-radius: 0.04rem;
+  position: fixed;
+  top: -0.5rem;
+  background-color: #fff;
+  overflow: hidden;
+  opacity: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: opacity .2s;
+  transition: opacity .2s;
+  font-size: 0.22rem;
+  text-align: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.pop-alert.pop-alert--success {
+  background-color: #f0f9eb;
+  color: #67c23a;
+}
+
+.pop-alert.pop-alert--error {
+  background-color: #f9eeeb;
+  color: #9a001b;
+}
+
+.pop-alert .alert-text {
+  display: table-cell;
+  padding: 0 0.08rem;
+}
+
+.el-select {
+  min-width: 4rem;
+}
+
+.el-select > .el-input {
+  position: relative;
+  font-size: 0.14rem;
+  display: block;
+  width: 100%;
+}
+
+.el-select .el-input.is-focus .el-input__inner {
+  width: 100%;
+  padding-right: 0.3rem;
+  -webkit-appearance: none;
+  background-color: #fff;
+  background-image: none;
+  border-radius: 0.04rem;
+  border: 0.01rem solid #dcdfe6;
+  box-sizing: border-box;
+  color: #606266;
+  display: inline-block;
+  font-size: inherit;
+  height: 0.5rem;
+  line-height: 0.5rem;
+  outline: none;
+  padding: 0 0.15rem;
+  -webkit-transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  cursor: pointer;
+  font-size: 0.22rem;
+}
+
+.el-select .el-input.is-focus .el-input__inner {
+  border-color: #409eff;
+}
+
+.el-input__suffix {
+  position: absolute;
+  height: 100%;
+  right: 0.05rem;
+  top: 0;
+  text-align: center;
+  color: #c0c4cc;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  pointer-events: none;
+}
+
+.el-input__suffix-inner {
+  pointer-events: all;
+  text-align: center;
+  color: #c0c4cc;
+}
+
+.el-select .el-input .el-select__caret.is-reverse {
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.el-select .el-input .el-select__caret {
+  color: #c0c4cc;
+  font-size: 0.16rem;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+  cursor: pointer;
+}
+
+.el-input__icon {
+  width: 0.25rem;
+  line-height: 0.4rem;
+}
+
+.el-select-dropdown {
+  min-width: 4rem;
+  position: absolute;
+  z-index: 90;
+  border-radius: 0.04rem;
+  background-color: #fff;
+  box-shadow: 0 0.02rem 0.12rem 0 rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  margin: 0.05rem 0;
+  text-align: left;
+  height: 0;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.el-select-dropdown__item {
+  font-size: 0.22rem;
+  padding: 0 0.2rem;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #606266;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.el-select-dropdown__item.selected {
+  color: #8567a1;
+  font-weight: 700;
+}
+
+.el-select-dropdown__item.selected,
+.el-select-dropdown__item:hover {
+  color: #8567a1;
+  font-weight: 700;
+  background-color: #f5f7fa;
+}
+
+.el-icon-arrow-up {
+  width: 0.2rem;
+  margin-top: 0.15rem;
+  margin-right: 0.15rem;
+  display: inline-block;
+  height: 0.2rem;
+  background: url(/i/arrowdown.png) no-repeat;
+  background-size: 100% 100%;
+}
+
+.el-select-dropdown__wrap {
+  overflow: scroll;
+  height: 100%;
+  max-height: 4rem;
+}
