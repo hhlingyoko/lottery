@@ -53,16 +53,16 @@ $(function () {
         console.log('stop---');
         var param = {
           award_users: [{
-            avatar: '../i/1.jpg',
+            avatar: './i/1.jpg',
             realname: 'xx'
           }, {
-            avatar: '../i/1.jpg',
+            avatar: './i/1.jpg',
             realname: 'xx2'
           }, {
-            avatar: '../i/1.jpg',
+            avatar: './i/1.jpg',
             realname: 'xx'
           }, {
-            avatar: '../i/1.jpg',
+            avatar: './i/1.jpg',
             realname: 'xx2'
           }]
         };
