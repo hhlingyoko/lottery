@@ -4,5 +4,5 @@
 ### 使用方法 
 * 示例在test文件中
 * 点击开始 ，球形照片旋转；点击结束，停止旋转，跳出中奖结果
-![Alt text](/i/to/show.png)
+![Alt text](./i/to/show.png)
 
